@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--active" id="player--0">
+        <p class="player-name" id="player-name--0">player 0</p>
+        <p class="player-score" id="player-score--0">43</p>
+
+        <div class="current-score-box">
+          <div class="box-descriotion">current</div>
+          <p class="current-score" id="player-current-scrore--0">0</p>
+        </div>
+      </section>
+      <section class="player" id="player--1">
+        <p class="player-name" id="player-name--1">player 1</p>
+        <p class="player-score" id="player-score--1">43</p>
+        <div class="current-score-box">
+          <div class="box-descriotion">current</div>
+          <p class="current-score" id="player-current-scrore--1">0</p>
+        </div>
+      </section>
+      <div class="controls">
+        <button class="btn btn-reload" id="new-game">🔄new game</button>
+        <img src="dice-5.png" alt="Playing dice" class="dice" />
+        <button class="btn btn-dice" id="roll-dice">🎲roll dice</button>
+        <button class="btn btn-hold" id="hold">📥hold</button>
+      </div>
+      <h1 class="displayWinner"></h1>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --pl-color: #c7365f;
+  --active-color: rgba(255, 255, 255, 0.4);
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 70rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem var(--box-shadow);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+  opacity: 0.5;
+}
+.player--active {
+  background-color: var(--active-color);
+  opacity: 1;
+}
+.player-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+.player-score {
+  margin-top: 2rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--pl-color);
+}
+/* ELEMENTS */
+.dice {
+  position: absolute;
+  top: 20rem;
+  width: 100px;
+  height: 100px;
+}
+
+.hidden {
+  display: none;
+}
+/*BUTTONS STYLE*/
+.btn {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  color: var(--pl-color);
+  opacity: 0.8;
+}
+.btn-reload {
+  position: absolute;
+  top: 10rem;
+}
+.btn-dice {
+  position: absolute;
+  bottom: 28%;
+}
+.btn-hold {
+  position: absolute;
+  bottom: 20%;
+}
+/*current score box*/
+.current-score-box {
+  background-color: var(--pl-color);
+  border-radius: 1.2rem;
+  padding: 1rem 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 2rem;
+  line-height: 1.8;
+  box-shadow: 0 1rem 2rem var(--box-shadow);
+  position: absolute;
+  bottom: 10%;
+  transform: translate(0, -50%);
+}
+.current-score {
+  font-size: 3rem;
+}
+/*CONTROLS*/
+.controls {
+  width: 250px;
+  height: 100%;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+.displayWinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  text-align: center;
+  color: #753682;
+}
